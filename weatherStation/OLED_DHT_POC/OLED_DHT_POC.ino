@@ -18,8 +18,8 @@
 #include <DHT.h>
 
 #define DHTPIN 2    // Arduino digital pin 2
-#define DHTTYPE DHT22
-//#define DHTTYPE DHT21
+//#define DHTTYPE DHT22
+#define DHTTYPE DHT11
 
 // initialize the library with the numbers of the interface pins
 Adafruit_CharacterOLED lcd(6, 7, 8, 9, 10, 11, 12);
@@ -44,7 +44,7 @@ void loop()
   lcd.setCursor(0, 1);
   if (isnan(t) || isnan(h)) {
     Serial.println("DHT read failure");
-    lcd.print("DHT Read failure");
+    lcd.print("DHT fail");
   } else {
     float f = dht.convertCtoF(t);
     lcd.print(h);
