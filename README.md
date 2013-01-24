@@ -1,4 +1,5 @@
 scratchpad
 ==========
 
-Prototyping and doodling
+Prototyping and doodling.  Don't assume anything works here.
+
